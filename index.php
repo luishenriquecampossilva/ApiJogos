@@ -92,10 +92,10 @@
         <form name="DateFilter" method="POST"class ="formulario">
         Entre:
         
-          <input type="date" name="dateFrom"/>
+          <input type="date" name="dataini"/>
 
 e:
-          <input type="date" name="dateTo" />
+          <input type="date" name="datafim" />
           <input type="submit" name="submit" value="Buscar"/>
         </form>
         

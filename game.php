@@ -3,29 +3,29 @@
 
 
 
- if(isset($_POST['dateFrom']) && isset($_POST['dateTo'])){
-$inicio = date('Y-m-d', strtotime($_POST['dateFrom']));
-$fim = date('Y-m-d', strtotime($_POST['dateTo']));
-$te=0;
-$re=0;
+ if(isset($_POST['dataini']) && isset($_POST['datafim'])){
+$inicio = date('Y-m-d', strtotime($_POST['dataini']));
+$fim = date('Y-m-d', strtotime($_POST['datafim']));
+$auxiliar1=0;
+$auxiliar2=0;
 $fimform =  explode("-", $fim);
 $inicioform =  explode("-", $inicio);
 
 
 
 if($inicioform[0]>$fimform[0]){
-     $te=$inicio ;
-$re = $fim;
+     $auxiliar1=$inicio ;
+$auxiliar2 = $fim;
     // echo $inicio;
 }
 elseif($inicioform[0]==$fimform[0] && $inicioform[1]>$fimform[1]){
-    $te=$inicio ;
-    $re = $fim;
+    $auxiliar1=$inicio ;
+    $auxiliar2 = $fim;
 }
 else{
 
-    $te=$fim ;
-    $re = $inicio;
+    $auxiliar1=$fim ;
+    $auxiliar2 = $inicio;
 }
 
 
@@ -43,7 +43,7 @@ else{
 //     $fim = '2020-05-30';
 // }
 
-        $url = 'https://api.rawg.io/api/games?dates='.$re.','.$te.'&ordering=-added';
+        $url = 'https://api.rawg.io/api/games?dates='.$auxiliar2.','.$auxiliar1.'&ordering=-added';
         $consumo = json_decode(file_get_contents($url));
  
 
