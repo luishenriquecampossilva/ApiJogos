@@ -3,22 +3,47 @@
 
 
 
-if(isset($_POST['dateFrom']) && isset($_POST['dateTo'])){
+ if(isset($_POST['dateFrom']) && isset($_POST['dateTo'])){
 $inicio = date('Y-m-d', strtotime($_POST['dateFrom']));
 $fim = date('Y-m-d', strtotime($_POST['dateTo']));
-if($inicio>$fim){
+$te=0;
+$re=0;
+$fimform =  explode("-", $fim);
+$inicioform =  explode("-", $inicio);
 
-    $fim = $inicio;
-}
-}
 
+
+if($inicioform[0]>$fimform[0]){
+     $te=$inicio ;
+$re = $fim;
+    // echo $inicio;
+}
+elseif($inicioform[0]==$fimform[0] && $inicioform[1]>$fimform[1]){
+    $te=$inicio ;
+    $re = $fim;
+}
 else{
 
-    $inicio = '2020-04-30';
-    $fim = '2020-05-30';
+    $te=$fim ;
+    $re = $inicio;
 }
 
-        $url = 'https://api.rawg.io/api/games?dates='.$inicio.','.$fim.'&ordering=-added';
+
+// echo $inicio;
+
+// if($inicio>$fim){
+
+//     $fim = $inicio;
+// }
+// // }
+
+// else{
+
+//     $inicio = '2020-04-30';
+//     $fim = '2020-05-30';
+// }
+
+        $url = 'https://api.rawg.io/api/games?dates='.$re.','.$te.'&ordering=-added';
         $consumo = json_decode(file_get_contents($url));
  
 
@@ -32,13 +57,13 @@ for($i=0; $i<=count($consumo->results); $i++){
 echo "<div class = 'col-lg-4 col-md-4 col-sm-4'><div class='card' style='width: 18rem;'>
 <img class='card-img-top' src='".$consumo->results[$i]->background_image."'style='height: 200px;' alt='Card image cap'>
 <div class='card-body'>
-<h1 style = 'font-size:11px'>".$consumo->results[$i]->name."</h1>
+<h1 style = 'font-size:25px; color:gray'>".$consumo->results[$i]->name."</h1>
 <a href = '".$consumo->results[$i]->clip->clip."'>Preview</a>
 <p><b>Plataforma Principal:</b>".$consumo->results[$i]->platforms[0]->platform->name."
   <p><b>Genero:</b>".$consumo->results[$i]->genres[0]->name."
 </div>
 </div></div>";
-}}
+}}}
 //  $consumo->results[0]->background_image;
 // $teste= "s";
 // // echo $teste = $consumo->results[1]->name;

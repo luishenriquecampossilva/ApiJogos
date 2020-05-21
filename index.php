@@ -2,7 +2,7 @@
 <php
 
 
- include('viacep.php');
+ include('game.php');
 
      
 
@@ -27,24 +27,94 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>api jogos</title>
+
+    <style>
+      .seila{
+          width:100%;
+          height:200px;
+          background-color:#A18F72;
+          box-shadow: 10px 10px 5px grey;
+      }
+      .formulario{
+
+        background-color:;
+        width:500px;
+       
+       
+
+      }
+      .titulo{
+
+        background-color:;
+        text-align:center;
+        color:white;
+        text-shadow: 2px 2px 5px black;
+      }
+    .ima{
+      background-color:;
+      margin:auto;
+      
+    }
+
+    .game{
+      background-color:;
+    }
+    @media (min-width: 1170px) and (max-width: 1800px) { 
+
+      .formulario{
+        margin-left:700px;
+      }
+    }
+      @media (min-width: 1000px) and (max-width: 1179px) { 
+
+.formulario{
+  margin-left:500px;
+}
+
+
+
+
+     }
+    </style>
   </head>
   <body>
+
+ 
+  
+   <div class = "seila">
+    <h1 class = "titulo">GAMES RAWG</h1>
+    <div class = "ima">
+    <center>
+      <img src="game-controller.png"/>
+      </center>
+    </div>
+    <div class = "game">
+        <form name="DateFilter" method="POST"class ="formulario">
+        Entre:
+        
+          <input type="date" name="dateFrom"/>
+
+e:
+          <input type="date" name="dateTo" />
+          <input type="submit" name="submit" value="Buscar"/>
+        </form>
+        
+        </div>
+    
+
+</div>
+
+ 
+</div>
+<br>
+<br>
   <div class = "container">
 
-<h1>Consumindo a API RAWG</h1>
 
-  <form name="DateFilter" method="POST">
-ENTRE:
-<input type="date" name="dateFrom" />
-
-E:
-<input type="date" name="dateTo" />
-<input type="submit" name="submit" value="Login"/>
-</form>
     
         <div class = "row">
             
-    <?php include('viacep.php');?>
+    <?php include('game.php');?>
   
   </div>
 </div>
