@@ -31,15 +31,16 @@
     <style>
       .seila{
           width:100%;
-          height:200px;
-          background-color:#A18F72;
+          height:300px;
+          /* background-color:#A18F72; */
           box-shadow: 10px 10px 5px grey;
+           background-image: url("so.png");
       }
       .formulario{
 
         background-color:;
         width:500px;
-       
+       margin-top:30px;
        
 
       }
@@ -48,7 +49,10 @@
         background-color:;
         text-align:center;
         color:white;
+        font-size:60px;
         text-shadow: 2px 2px 5px black;
+        font-family:"Base 02";
+        padding-top:40px;
       }
     .ima{
       background-color:;
@@ -82,20 +86,15 @@
  
   
    <div class = "seila">
-    <h1 class = "titulo">GAMES RAWG</h1>
-    <div class = "ima">
-    <center>
-      <img src="game-controller.png"/>
-      </center>
-    </div>
+    <h1 class = "titulo">RAWG<BR><span style = "color:#E8E2C1;font-family:arial;font-size:30px;font-style:italic;">GAMES</span></h1>
+   
     <div class = "game">
         <form name="DateFilter" method="POST"class ="formulario">
-        Entre:
+        <span style="color:white; font-wegghit:bold;">Inicio:</span>
         
           <input type="date" name="dataini"/>
 
-e:
-          <input type="date" name="datafim" />
+          <span style="color:white">Fim:</span>       <input type="date" name="datafim" />
           <input type="submit" name="submit" value="Buscar"/>
         </form>
         
