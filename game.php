@@ -61,6 +61,8 @@ echo "<div class = 'col-lg-4 col-md-4 col-sm-4'><div class='card' style='width: 
 <a href = '".$consumo->results[$i]->clip->clip."'>Preview</a>
 <p><b>Plataforma Principal:</b>".$consumo->results[$i]->platforms[0]->platform->name."
   <p><b>Genero:</b>".$consumo->results[$i]->genres[0]->name."
+
+  <p><b>Data:</b>".$consumo->results[$i]->released."</p>
 </div>
 </div></div>";
 }}}
