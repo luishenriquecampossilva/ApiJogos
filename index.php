@@ -92,9 +92,9 @@
         <form name="DateFilter" method="POST"class ="formulario">
         <span style="color:white; font-wegghit:bold;">Inicio:</span>
         
-          <input type="date" name="dataini"value="0000-00-00"/>
+          <input type="date" name="dataini"value="2020-05-22"/>
 
-          <span style="color:white">Fim:</span>       <input type="date" name="datafim"value="0000-00-00" />
+          <span style="color:white">Fim:</span>       <input type="date" name="datafim"value="2020-05-22" />
           <input type="submit" name="submit" value="Buscar"/>
         </form>
         
