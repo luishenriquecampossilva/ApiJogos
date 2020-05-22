@@ -104,7 +104,7 @@
     </ul>
   </div>
 </nav> -->
-   <div class = "seila">
+   <div class = "seila img-fluid">
     <h1 class = "titulo">RAWG<BR><span style = "color:#E8E2C1;font-family:arial;font-size:30px;font-style:italic;">GAMES</span></h1>
    
     <div class = "game">

@@ -59,7 +59,7 @@ for($i=0; $i<=count($consumo->results); $i++){
     if(isset($consumo->results[$i]->background_image) && isset($consumo->results[$i]->clip->clip)){
 
       
-echo "<div class = 'col-lg-4 col-md-4 col-sm-4'><div class='card' style='width: 18rem;'>
+echo "<div class = 'col-lg-4 col-md-6 col-sm-12'><div class='card' style='width: 18rem;'>
 <img class='card-img-top' src='".$consumo->results[$i]->background_image."'style='height: 200px;' alt='Card image cap'>
 <div class='card-body'>
 <h1 style = 'font-size:25px; color:gray'>".$consumo->results[$i]->name."</h1>
