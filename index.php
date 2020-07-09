@@ -51,7 +51,10 @@
         color:white;
         font-size:60px;
         text-shadow: 2px 2px 5px black;
-        font-family:"Base 02";
+        @font-face {
+  font-family: myFirstFont;
+  src: url(https://www.dafont.com/pt/base-02.font);
+}
         padding-top:40px;
       }
     .ima{
