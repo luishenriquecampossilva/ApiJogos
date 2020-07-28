@@ -134,7 +134,7 @@
 
     
         <div class = "row">
-            
+            //Inclusão de arquivos com php
     <?php include('game.php');?>
   
   </div>
